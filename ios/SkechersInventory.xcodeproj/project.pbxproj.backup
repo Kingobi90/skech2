@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		082EEB1603282301AAE44622 /* CameraScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818627329422CA73655B297 /* CameraScannerView.swift */; };
+		0EB3C22AD03C5BC33DDDC695 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7A63AC8C4B909DBCDAC64 /* SettingsView.swift */; };
+		0EB43247B396402E334FBE3B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770EB465C23986C46C705541 /* HomeView.swift */; };
+		15E4E6E183D1DA466C6CBACD /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BDB6F2D9B5981216FDAA7B /* SyncManager.swift */; };
+		16CABC4F5803B45BD3E79088 /* OptimizedGlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC28D026797434F1C016C060 /* OptimizedGlassCard.swift */; };
+		1FCE49C8DB9CA29D5C9BFAA6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7793768311C91446A98350 /* LoadingView.swift */; };
+		2D5C60CBD1A27EE8548370B1 /* ParsedInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05BE3E2C3778F431F6E5BB0 /* ParsedInventoryView.swift */; };
+		3574B289D49D2083E44D5DC4 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 94895158E09F508B5723FF58 /* GRDB */; };
+		5FE8E909E3F606D5C87811A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CA84B9CE92ECEC3F98643 /* ContentView.swift */; };
+		63C7C63854B7E3932EB54F24 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B4CBB20E66B12F9ED50AB /* ImageCache.swift */; };
+		6D81132407BFB9FB5A30C6A7 /* ItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F978CEA81E128FEF0145C /* ItemStatus.swift */; };
+		794812976DCAB8A17D59BA43 /* SystemStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF000CBEFE4EFF3E9651D2 /* SystemStats.swift */; };
+		88C870A8F72B1ED4CF0FEFF8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67A005A71FF7AD8A6D1FBE /* APIManager.swift */; };
+		97078E2751600949C5995882 /* FileUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210B323DE51C7D4B125C3B89 /* FileUploadView.swift */; };
+		A105D2E81992C8AEB9087AB2 /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97749D012C646E5ECE1DE0E3 /* StatusBadge.swift */; };
+		A915AB1BA2F535F6041CC2A2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322A35DA6CB83F35E7FBB4B /* DatabaseManager.swift */; };
+		ADCE52F5AB5A9330237C3D88 /* SkechersInventoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D426A4902C32460D20EDCC26 /* SkechersInventoryApp.swift */; };
+		C760CC4B3EAFF7A7DC1759FB /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D5DB10A55AEE153BB36444 /* ScanResultView.swift */; };
+		D33438DA8DB0DF5954AB40F5 /* WorkflowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2412B700E22062D21AE844 /* WorkflowView.swift */; };
+		D76FC9C77FD5D4A1457AB153 /* ManagerApprovalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDFA73F8032309843007184 /* ManagerApprovalView.swift */; };
+		DB8ABBCD1AECA56A88626786 /* ManualEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E8B3CB250CC9DA41AECBD /* ManualEntryView.swift */; };
+		E4CDD52CAE39A5A336F8F63C /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5497AF28DA8767C3C88FB5 /* InventoryItem.swift */; };
+		EA9CFA677622A45E951C3035 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75636F615DD54B301D11DCDE /* InventoryView.swift */; };
+		F56ACEBB2C71FC589F838CB5 /* RolePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1CF629DE09BE921337303 /* RolePickerView.swift */; };
+		F89E9FDFCC9F02DA7F94D6C9 /* PlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF5313F971CE7D5A9DED96 /* PlacementView.swift */; };
+		33CD42C8E6E447B8989EC305 /* CatalogBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A219D9C9E3D43C581B9A420 /* CatalogBuilderView.swift */; };
+	/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A0B4CBB20E66B12F9ED50AB /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		179CA84B9CE92ECEC3F98643 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2023034DD218276DD5A96CA8 /* SkechersInventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkechersInventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		210B323DE51C7D4B125C3B89 /* FileUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUploadView.swift; sourceTree = "<group>"; };
+		2B5497AF28DA8767C3C88FB5 /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
+		3EC1CF629DE09BE921337303 /* RolePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolePickerView.swift; sourceTree = "<group>"; };
+		4DDFA73F8032309843007184 /* ManagerApprovalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerApprovalView.swift; sourceTree = "<group>"; };
+		5818627329422CA73655B297 /* CameraScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerView.swift; sourceTree = "<group>"; };
+		60F09FECE0078AAFA881D2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		64DF000CBEFE4EFF3E9651D2 /* SystemStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStats.swift; sourceTree = "<group>"; };
+		75636F615DD54B301D11DCDE /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		770EB465C23986C46C705541 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		77D5DB10A55AEE153BB36444 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
+		8A9E8B3CB250CC9DA41AECBD /* ManualEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualEntryView.swift; sourceTree = "<group>"; };
+		97749D012C646E5ECE1DE0E3 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
+		A322A35DA6CB83F35E7FBB4B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		A8BDB6F2D9B5981216FDAA7B /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		A9BF5313F971CE7D5A9DED96 /* PlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementView.swift; sourceTree = "<group>"; };
+		AF2412B700E22062D21AE844 /* WorkflowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowView.swift; sourceTree = "<group>"; };
+		D426A4902C32460D20EDCC26 /* SkechersInventoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkechersInventoryApp.swift; sourceTree = "<group>"; };
+		D60F978CEA81E128FEF0145C /* ItemStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStatus.swift; sourceTree = "<group>"; };
+		F05BE3E2C3778F431F6E5BB0 /* ParsedInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedInventoryView.swift; sourceTree = "<group>"; };
+		F6C7A63AC8C4B909DBCDAC64 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FB7793768311C91446A98350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FC28D026797434F1C016C060 /* OptimizedGlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizedGlassCard.swift; sourceTree = "<group>"; };
+		FF67A005A71FF7AD8A6D1FBE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3A219D9C9E3D43C581B9A420 /* CatalogBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogBuilderView.swift; sourceTree = "<group>"; };
+	/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A28B584C37E954E7469F73C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3574B289D49D2083E44D5DC4 /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E05F7FF64275D18FD4B8CB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5818627329422CA73655B297 /* CameraScannerView.swift */,
+				F05BE3E2C3778F431F6E5BB0 /* ParsedInventoryView.swift */,
+				210B323DE51C7D4B125C3B89 /* FileUploadView.swift */,
+				770EB465C23986C46C705541 /* HomeView.swift */,
+				75636F615DD54B301D11DCDE /* InventoryView.swift */,
+				FB7793768311C91446A98350 /* LoadingView.swift */,
+				4DDFA73F8032309843007184 /* ManagerApprovalView.swift */,
+				8A9E8B3CB250CC9DA41AECBD /* ManualEntryView.swift */,
+				A9BF5313F971CE7D5A9DED96 /* PlacementView.swift */,
+				3EC1CF629DE09BE921337303 /* RolePickerView.swift */,
+				77D5DB10A55AEE153BB36444 /* ScanResultView.swift */,
+				F6C7A63AC8C4B909DBCDAC64 /* SettingsView.swift */,
+				AF2412B700E22062D21AE844 /* WorkflowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65249E0A82300C46731B5C56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B5497AF28DA8767C3C88FB5 /* InventoryItem.swift */,
+				D60F978CEA81E128FEF0145C /* ItemStatus.swift */,
+				64DF000CBEFE4EFF3E9651D2 /* SystemStats.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		676A80F4686B3F2F4455DC15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2023034DD218276DD5A96CA8 /* SkechersInventory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7344429E43C4E0175BCEFF54 = {
+			isa = PBXGroup;
+			children = (
+				78E95A5D616214C2A326BF0A /* SkechersInventory */,
+				676A80F4686B3F2F4455DC15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7445D3CCAB301DC9D7F70E66 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FF67A005A71FF7AD8A6D1FBE /* APIManager.swift */,
+				A322A35DA6CB83F35E7FBB4B /* DatabaseManager.swift */,
+				A8BDB6F2D9B5981216FDAA7B /* SyncManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		78E95A5D616214C2A326BF0A /* SkechersInventory */ = {
+			isa = PBXGroup;
+			children = (
+				179CA84B9CE92ECEC3F98643 /* ContentView.swift */,
+				60F09FECE0078AAFA881D2CD /* Info.plist */,
+				D426A4902C32460D20EDCC26 /* SkechersInventoryApp.swift */,
+				A1965F7FD3FAD1B5625D28F3 /* Components */,
+				7445D3CCAB301DC9D7F70E66 /* Managers */,
+				65249E0A82300C46731B5C56 /* Models */,
+				8CE22C9AF194F703D14FF04F /* Utilities */,
+				5E05F7FF64275D18FD4B8CB2 /* Views */,
+			);
+			path = SkechersInventory;
+			sourceTree = "<group>";
+		};
+		8CE22C9AF194F703D14FF04F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B4CBB20E66B12F9ED50AB /* ImageCache.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A1965F7FD3FAD1B5625D28F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FC28D026797434F1C016C060 /* OptimizedGlassCard.swift */,
+				97749D012C646E5ECE1DE0E3 /* StatusBadge.swift */,
+			,
+				3A219D9C9E3D43C581B9A420 /* CatalogBuilderView.swift */);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BE5BD3AF330A21C7F30D334 /* SkechersInventory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F28A00CB443B11EEB7A6D37 /* Build configuration list for PBXNativeTarget "SkechersInventory" */;
+			buildPhases = (
+				42C21CDF56DB21B7A28C4426 /* Sources */,
+				A28B584C37E954E7469F73C7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkechersInventory;
+			packageProductDependencies = (
+				94895158E09F508B5723FF58 /* GRDB */,
+			);
+			productName = SkechersInventory;
+			productReference = 2023034DD218276DD5A96CA8 /* SkechersInventory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D07C069120FA96A6579A1D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = AD40A548B9E541D49A9DF364 /* Build configuration list for PBXProject "SkechersInventory" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7344429E43C4E0175BCEFF54;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				805FD6D26798DB3E1738EE70 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BE5BD3AF330A21C7F30D334 /* SkechersInventory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42C21CDF56DB21B7A28C4426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C870A8F72B1ED4CF0FEFF8 /* APIManager.swift in Sources */,
+				082EEB1603282301AAE44622 /* CameraScannerView.swift in Sources */,
+				2D5C60CBD1A27EE8548370B1 /* ParsedInventoryView.swift in Sources */,
+				5FE8E909E3F606D5C87811A3 /* ContentView.swift in Sources */,
+				A915AB1BA2F535F6041CC2A2 /* DatabaseManager.swift in Sources */,
+				97078E2751600949C5995882 /* FileUploadView.swift in Sources */,
+				0EB43247B396402E334FBE3B /* HomeView.swift in Sources */,
+				63C7C63854B7E3932EB54F24 /* ImageCache.swift in Sources */,
+				E4CDD52CAE39A5A336F8F63C /* InventoryItem.swift in Sources */,
+				EA9CFA677622A45E951C3035 /* InventoryView.swift in Sources */,
+				6D81132407BFB9FB5A30C6A7 /* ItemStatus.swift in Sources */,
+				1FCE49C8DB9CA29D5C9BFAA6 /* LoadingView.swift in Sources */,
+				D76FC9C77FD5D4A1457AB153 /* ManagerApprovalView.swift in Sources */,
+				DB8ABBCD1AECA56A88626786 /* ManualEntryView.swift in Sources */,
+				16CABC4F5803B45BD3E79088 /* OptimizedGlassCard.swift in Sources */,
+				F89E9FDFCC9F02DA7F94D6C9 /* PlacementView.swift in Sources */,
+				F56ACEBB2C71FC589F838CB5 /* RolePickerView.swift in Sources */,
+				C760CC4B3EAFF7A7DC1759FB /* ScanResultView.swift in Sources */,
+				0EB3C22AD03C5BC33DDDC695 /* SettingsView.swift in Sources */,
+				ADCE52F5AB5A9330237C3D88 /* SkechersInventoryApp.swift in Sources */,
+				A105D2E81992C8AEB9087AB2 /* StatusBadge.swift in Sources */,
+				15E4E6E183D1DA466C6CBACD /* SyncManager.swift in Sources */,
+				794812976DCAB8A17D59BA43 /* SystemStats.swift in Sources */,
+				D33438DA8DB0DF5954AB40F5 /* WorkflowView.swift in Sources */,
+			,
+				33CD42C8E6E447B8989EC305 /* CatalogBuilderView.swift in Sources */);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		71585E5A1DF2679F26779CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8YV599396U;
+				INFOPLIST_FILE = SkechersInventory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skechers.inventory;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D508A00CE8138C47A98D0333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8YV599396U;
+				INFOPLIST_FILE = SkechersInventory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skechers.inventory;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC9C5C133036DC09637704EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		F6F20E0A145EA69ECE4F2628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F28A00CB443B11EEB7A6D37 /* Build configuration list for PBXNativeTarget "SkechersInventory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71585E5A1DF2679F26779CBC /* Debug */,
+				D508A00CE8138C47A98D0333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AD40A548B9E541D49A9DF364 /* Build configuration list for PBXProject "SkechersInventory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6F20E0A145EA69ECE4F2628 /* Debug */,
+				EC9C5C133036DC09637704EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		805FD6D26798DB3E1738EE70 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94895158E09F508B5723FF58 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805FD6D26798DB3E1738EE70 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2D07C069120FA96A6579A1D3 /* Project object */;
+}

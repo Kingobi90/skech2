@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Logs
+*.log
+
+# Node modules (if any)
+node_modules/
+
+# iOS
+ios/SkechersInventory.xcodeproj/project.xcworkspace/xcuserdata/
+ios/SkechersInventory.xcodeproj/xcuserdata/
+ios/DerivedData/
+ios/build/
+*.xcuserstate
+
+# Secrets
+*.pem
+*.key
+credentials.json
