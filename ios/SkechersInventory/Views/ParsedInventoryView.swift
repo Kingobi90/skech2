@@ -156,17 +156,26 @@ struct ParsedInventoryView: View {
         Task {
             do {
                 let syncData = try await APIManager.shared.fullSync(deviceId: UIDevice.current.identifierForVendor?.uuidString ?? "unknown")
-                
+
+                // Get the list of currently uploaded file IDs from UserDefaults
+                let uploadedFileIds = getUploadedFileIds()
+
                 // Get base URL from APIManager
                 let baseURL = APIManager.shared.getBaseURL()
-                
+
                 var items: [ParsedInventoryItem] = []
-                
+
                 for style in syncData.styles {
+                    // Only include styles that have at least one source file matching our uploaded files
+                    let matchingSourceFiles = style.sourceFileIds.filter { uploadedFileIds.contains($0) }
+
+                    // Skip this style if it has no matching source files
+                    guard !matchingSourceFiles.isEmpty else { continue }
+
                     for colorName in style.colors {
                         // Construct image URL using the configured base URL
                         let imageUrl = "\(baseURL)/uploads/shoe_images/\(style.styleNumber)_\(colorName).png"
-                        
+
                         let item = ParsedInventoryItem(
                             styleNumber: style.styleNumber,
                             colorCode: colorName,
@@ -177,7 +186,7 @@ struct ParsedInventoryView: View {
                             outsole: style.outsole,
                             imageURL: imageUrl,
                             lastUpdated: ISO8601DateFormatter().date(from: style.updatedAt) ?? Date(),
-                            sourceFiles: style.sourceFileIds.compactMap { fileId in
+                            sourceFiles: matchingSourceFiles.compactMap { fileId in
                                 syncData.files.first(where: { $0.id == fileId }).map {
                                     SourceFileInfo(id: $0.id, filename: $0.filename)
                                 }
@@ -186,7 +195,7 @@ struct ParsedInventoryView: View {
                         items.append(item)
                     }
                 }
-                
+
                 await MainActor.run {
                     inventoryItems = items
                     isLoading = false
@@ -199,6 +208,15 @@ struct ParsedInventoryView: View {
                 }
             }
         }
+    }
+
+    private func getUploadedFileIds() -> Set<Int> {
+        guard let data = UserDefaults.standard.data(forKey: "uploadedFiles"),
+              let uploadedFiles = try? JSONDecoder().decode([UploadedFile].self, from: data) else {
+            return Set()
+        }
+
+        return Set(uploadedFiles.compactMap { $0.fileId })
     }
     
     
@@ -433,4 +451,14 @@ struct ParsedInventoryItem: Identifiable, Codable {
 struct SourceFileInfo: Identifiable, Codable {
     let id: Int
     let filename: String
+}
+
+// Need to mirror UploadedFile struct to decode from UserDefaults
+private struct UploadedFile: Codable {
+    let id: UUID
+    let name: String
+    let type: String
+    let uploadDate: Date
+    let isProcessing: Bool
+    let fileId: Int?
 }

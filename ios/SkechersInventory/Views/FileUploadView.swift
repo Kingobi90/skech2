@@ -176,13 +176,13 @@ struct FileUploadView: View {
     
     private func uploadAndParse() {
         saveFiles()
-        
+
         guard let latestFile = uploadedFiles.first else { return }
-        
+
         showingLoading = true
         loadingMessage = "Uploading \(latestFile.name)..."
         uploadProgress = 0.2
-        
+
         Task {
             defer {
                 // Always hide loading after completion or error
@@ -193,35 +193,35 @@ struct FileUploadView: View {
                     }
                 }
             }
-            
+
             do {
                 // Get file URL from document picker (stored temporarily)
                 guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
                     throw NSError(domain: "FileUpload", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not access documents directory"])
                 }
-                
+
                 let fileURL = documentsURL.appendingPathComponent(latestFile.name)
-                
+
                 await MainActor.run {
                     loadingMessage = "Parsing file data..."
                     uploadProgress = 0.5
                 }
-                
+
                 // Determine file type
                 let fileType = latestFile.type == .excel ? "xlsx" : "pdf"
-                
+
                 // Upload to backend
                 let response = try await APIManager.shared.uploadFile(
                     fileURL: fileURL,
                     fileType: fileType,
                     category: "all_bought"
                 )
-                
+
                 await MainActor.run {
                     loadingMessage = "Extracting inventory items..."
                     uploadProgress = 0.8
                 }
-                
+
                 // Mark file as processed and save fileId
                 await MainActor.run {
                     if let index = uploadedFiles.firstIndex(where: { $0.id == latestFile.id }) {
@@ -235,15 +235,29 @@ struct FileUploadView: View {
                         )
                         saveFiles()
                     }
-                    
+
                     loadingMessage = "Complete! Parsed successfully"
                     uploadProgress = 1.0
                 }
-                
+
                 print("✅ Upload completed successfully: \(response.filename)")
             } catch {
                 print("❌ Upload error: \(error.localizedDescription)")
+
+                // Mark file as failed (not processing) and remove the fileId
                 await MainActor.run {
+                    if let index = uploadedFiles.firstIndex(where: { $0.id == latestFile.id }) {
+                        uploadedFiles[index] = UploadedFile(
+                            id: latestFile.id,
+                            name: latestFile.name,
+                            type: latestFile.type,
+                            uploadDate: latestFile.uploadDate,
+                            isProcessing: false,
+                            fileId: nil
+                        )
+                        saveFiles()
+                    }
+
                     loadingMessage = "Error: \(error.localizedDescription)"
                     uploadProgress = nil
                 }
