@@ -10,7 +10,7 @@ import tempfile
 import os
 from pathlib import Path
 from typing import Dict, Any, List, Optional
-from fastapi import FastAPI, Query, File, UploadFile, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Query, File, Form, UploadFile, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -250,32 +250,38 @@ async def api_health():
 
 
 @app.post("/api/files/upload")
-async def upload_file(file: UploadFile = File(...)):
+async def upload_file(
+    file: UploadFile = File(...),
+    file_type: Optional[str] = Form(None),
+    category: Optional[str] = Form(None)
+):
     """Upload and parse Excel file - compatible with existing iOS app endpoint"""
-    logger.info(f"📥 Received file: {file.filename}")
-    
+    logger.info(f"📥 Received file: {file.filename}, type: {file_type}, category: {category}")
+
     try:
-        # Determine file type and category from filename or extension
+        # Determine file type and category
         filename_lower = file.filename.lower()
         is_xlsb = filename_lower.endswith('.xlsb')
         is_xlsx = filename_lower.endswith('.xlsx') or filename_lower.endswith('.xls')
-        
+
         if not (is_xlsb or is_xlsx):
             return JSONResponse(
                 status_code=400,
                 content={'error': 'Invalid file type. Only XLSX and XLSB files are supported.'}
             )
-        
-        # Detect category from filename
-        if 'ki' in filename_lower or 'key' in filename_lower:
-            category = 'key_initiative'
-            file_type = 'xlsx'
-        elif 'bought' in filename_lower or 'all' in filename_lower:
-            category = 'all_bought'
-            file_type = 'xlsx'
-        else:
-            category = 'key_initiative'  # Default
-            file_type = 'xlsx'
+
+        # Use provided category or detect from filename
+        if not category:
+            if 'ki' in filename_lower or 'key' in filename_lower:
+                category = 'key_initiative'
+            elif 'bought' in filename_lower or 'all' in filename_lower:
+                category = 'all_bought'
+            else:
+                category = 'all_bought'  # Default to all_bought
+
+        # Use provided file_type or set based on extension
+        if not file_type:
+            file_type = 'xlsb' if is_xlsb else 'xlsx'
         
         suffix = '.xlsb' if is_xlsb else '.xlsx'
         
