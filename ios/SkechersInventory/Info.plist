@@ -24,6 +24,19 @@
 	<string>We need camera access to scan shoe tags</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We need photo library access to select shoe tag images</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>api.obinnachukwu.org</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>
